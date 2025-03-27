@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import loginRoute from './routes/userRoute.js';
 
-dotenv.config();
+ dotenv.config();
 
 const app = express();
 app.use(cors());
