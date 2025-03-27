@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import route from './routes/userRoute.js';
+import loginRoute from './routes/userRoute.js';
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use("/user", route); 
+app.use("/user", loginRoute);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
